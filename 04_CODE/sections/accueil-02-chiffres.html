@@ -1,0 +1,60 @@
+<!-- ===== MBC - SECTION 02 : CHIFFRES CLES ANIMES ===== -->
+<style>
+.mbc-stats{background:#fff;padding:70px 24px;font-family:'Inter',sans-serif;}
+.mbc-stats-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+.mbc-stat{text-align:center;padding:28px 16px;border-radius:12px;background:#F5F8FB;transition:transform .3s ease,box-shadow .3s ease;}
+.mbc-stat:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(11,37,69,.12);}
+.mbc-stat-num{display:block;font-family:'Sora',sans-serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;color:#00A896;line-height:1;margin-bottom:12px;}
+.mbc-stat-label{font-size:.95rem;color:#1E293B;line-height:1.5;display:block;}
+@media(max-width:900px){.mbc-stats-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.mbc-stats-grid{grid-template-columns:1fr;}}
+</style>
+
+<section class="mbc-stats">
+  <div class="mbc-stats-grid">
+    <div class="mbc-stat">
+      <span class="mbc-stat-num" data-target="1">0</span>
+      <span class="mbc-stat-label">International patent (CspCI &mdash; WO200594516A)</span>
+    </div>
+    <div class="mbc-stat">
+      <span class="mbc-stat-num" data-target="7">0</span>
+      <span class="mbc-stat-label">Restriction enzymes commercialized by New England Biolabs (USA)</span>
+    </div>
+    <div class="mbc-stat">
+      <span class="mbc-stat-num" data-target="2000" data-suffix="+">0</span>
+      <span class="mbc-stat-label">Bacterial isolates in the Cameroon Type Collection</span>
+    </div>
+    <div class="mbc-stat">
+      <span class="mbc-stat-num" data-target="4">0</span>
+      <span class="mbc-stat-label">World-renowned scientific advisors guiding our work</span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function mbcAnimate(el){
+    var target = parseInt(el.getAttribute('data-target'),10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1600, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString('en-US') + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !e.target.classList.contains('mbc-counted')){
+        e.target.classList.add('mbc-counted');
+        mbcAnimate(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.4});
+  document.querySelectorAll('.mbc-stat-num').forEach(function(el){ io.observe(el); });
+})();
+</script>

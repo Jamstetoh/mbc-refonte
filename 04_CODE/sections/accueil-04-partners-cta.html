@@ -1,0 +1,191 @@
+<!-- ===== MBC - SECTION 04 v4 : PARTNERS PREMIUM + CTA CINEMATIC ===== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* --- PARTNERS PREMIUM --- */
+.mbcx-partners{background:#F7FBFA;padding:120px 24px;font-family:'Inter',sans-serif;}
+.mbcx-partners-inner{max-width:1240px;margin:0 auto;}
+.mbcx-partners-head{text-align:center;margin-bottom:72px;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1);}
+.mbcx-partners.in .mbcx-partners-head{opacity:1;transform:none;}
+.mbcx-partners-head .overline{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00695C;margin-bottom:16px;display:block;}
+.mbcx-partners-head h2{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(2.2rem,3.8vw,3rem);color:#102A43;letter-spacing:-.02em;line-height:1.1;margin:0 0 18px;}
+.mbcx-partners-head p{color:rgba(16,42,67,.6);font-size:1.08rem;line-height:1.7;max-width:560px;margin:0 auto;}
+
+.mbcx-partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.mbcx-partner-card{background:#fff;border-radius:20px;padding:40px 32px;border:1px solid rgba(16,42,67,.06);box-shadow:0 4px 20px rgba(16,42,67,.04);transition:all .4s cubic-bezier(.16,1,.3,1);opacity:0;position:relative;overflow:hidden;}
+.mbcx-partner-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#00695C,#26A69A);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1);}
+.mbcx-partner-card:hover{transform:translateY(-10px);box-shadow:0 24px 60px rgba(16,42,67,.12);border-color:rgba(0,105,92,.2);}
+.mbcx-partner-card:hover::before{transform:scaleX(1);}
+.mbcx-partners.in .mbcx-partner-card{animation:ptCardIn .8s cubic-bezier(.16,1,.3,1) forwards;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(1){animation-delay:.1s;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(2){animation-delay:.18s;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(3){animation-delay:.26s;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(4){animation-delay:.34s;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(5){animation-delay:.42s;}
+.mbcx-partners.in .mbcx-partner-card:nth-child(6){animation-delay:.5s;}
+@keyframes ptCardIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+.mbcx-monogram{width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,#00695C 0%,#26A69A 100%);display:flex;align-items:center;justify-content:center;margin-bottom:28px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s ease;box-shadow:0 8px 24px rgba(0,105,92,.2);}
+.mbcx-partner-card:hover .mbcx-monogram{transform:scale(1.15) rotate(-8deg);box-shadow:0 16px 40px rgba(0,105,92,.35);}
+.mbcx-monogram svg{width:40px;height:40px;color:#fff;}
+.mbcx-partner-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:1.2rem;color:#102A43;margin:0 0 10px;line-height:1.3;}
+.mbcx-partner-card .pt-location{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:50px;background:rgba(0,105,92,.08);color:#00695C;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+.mbcx-partner-card .pt-location svg{width:12px;height:12px;}
+.mbcx-partner-card .pt-role{color:rgba(16,42,67,.6);font-size:.9rem;line-height:1.65;margin:0;}
+
+/* --- CTA CINEMATIC --- */
+.mbcx-cta-final{background:linear-gradient(135deg,#0B2239 0%,#102A43 50%,#0E3A34 100%);padding:140px 24px;font-family:'Inter',sans-serif;position:relative;overflow:hidden;}
+.mbcx-cta-final::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(38,166,154,.15) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(21,101,192,.12) 0%,transparent 50%);animation:ctaGlow 8s ease-in-out infinite;}
+@keyframes ctaGlow{0%,100%{opacity:.6;}50%{opacity:1;}}
+.mbcx-cta-particles{position:absolute;inset:0;z-index:1;}
+.mbcx-cta-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;text-align:center;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1);}
+.mbcx-cta-final.in .mbcx-cta-inner{opacity:1;transform:none;}
+.mbcx-cta-inner .overline{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#26A69A;margin-bottom:20px;display:block;}
+.mbcx-cta-inner h2{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(2.4rem,4.2vw,3.4rem);color:#fff;letter-spacing:-.02em;line-height:1.1;margin:0 0 24px;}
+.mbcx-cta-inner h2 .acc{background:linear-gradient(90deg,#26A69A 0%,#42A5F5 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.mbcx-cta-inner p{color:rgba(232,244,253,.8);font-size:1.1rem;line-height:1.7;margin:0 auto 48px;max-width:600px;}
+.mbcx-cta-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+.mbcx-cta-solid{display:inline-flex;align-items:center;gap:12px;background:#26A69A;color:#04251F;padding:18px 38px;border-radius:50px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 14px 34px rgba(38,166,154,.35);}
+.mbcx-cta-solid:hover{background:#2FBBAF;transform:translateY(-3px);box-shadow:0 20px 44px rgba(38,166,154,.45);}
+.mbcx-cta-solid svg{width:18px;height:18px;transition:transform .3s;}
+.mbcx-cta-solid:hover svg{transform:translateX(5px);}
+.mbcx-cta-ghost{display:inline-flex;align-items:center;padding:18px 36px;border:1.5px solid rgba(232,244,253,.25);border-radius:50px;color:#E8F4FD;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;}
+.mbcx-cta-ghost:hover{border-color:#26A69A;color:#8FE3D5;transform:translateY(-3px);}
+
+.mbcx-cta-contact{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:48px;border-top:1px solid rgba(255,255,255,.1);}
+.mbcx-cta-contact-item{display:flex;align-items:center;gap:12px;color:rgba(232,244,253,.7);font-size:.92rem;}
+.mbcx-cta-contact-item svg{width:18px;height:18px;color:#26A69A;flex-shrink:0;}
+.mbcx-cta-contact-item a{color:rgba(232,244,253,.9);text-decoration:none;transition:color .3s;}
+.mbcx-cta-contact-item a:hover{color:#8FE3D5;}
+
+@media(max-width:960px){
+  .mbcx-partners-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:640px){
+  .mbcx-partners-grid{grid-template-columns:1fr;}
+  .mbcx-partner-card{padding:32px 24px;}
+  .mbcx-cta-contact{gap:24px;flex-direction:column;align-items:center;}
+  .mbcx-partners,.mbcx-cta-final{padding:80px 20px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .mbcx-partners-head,.mbcx-partner-card,.mbcx-cta-inner{opacity:1;transform:none;transition:none;animation:none!important;}
+  .mbcx-cta-final::before{animation:none;}
+}
+</style>
+
+<!-- PARTNERS PREMIUM -->
+<section class="mbcx-partners" id="mbcPartners">
+  <div class="mbcx-partners-inner">
+    <div class="mbcx-partners-head">
+      <span class="overline">Trusted Partners</span>
+      <h2>Backed by leading institutions worldwide</h2>
+      <p>MBC collaborates with research institutes, universities and foundations across four continents.</p>
+    </div>
+
+    <div class="mbcx-partners-grid">
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>New England Biolabs</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>USA</div>
+        <p class="pt-role">Global leader in enzyme commercialization — 7 MBC enzymes distributed worldwide</p>
+      </article>
+
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Swiss TPH</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Switzerland</div>
+        <p class="pt-role">Swiss Tropical and Public Health Institute — global health research partnership</p>
+      </article>
+
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3>UC Berkeley</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>USA</div>
+        <p class="pt-role">University of California — Public Health research collaboration</p>
+      </article>
+
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Sustainable Science Institute</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>USA</div>
+        <p class="pt-role">Scientific partnership for sustainable biotechnology development</p>
+      </article>
+
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v9"/></svg>
+        </div>
+        <h3>YaBiNaPa Graduate School</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Cameroon / Germany</div>
+        <p class="pt-role">Yaoundé-Bielefeld partnership — graduate education in natural products</p>
+      </article>
+
+      <article class="mbcx-partner-card">
+        <div class="mbcx-monogram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Duke-NUS Medical School</h3>
+        <div class="pt-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Singapore</div>
+        <p class="pt-role">Emerging Infectious Diseases research — dengue therapeutics collaboration</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CINEMATIC -->
+<section class="mbcx-cta-final" id="mbcContact">
+  <canvas class="mbcx-cta-particles" id="mbcCtaParticles"></canvas>
+  <div class="mbcx-cta-inner">
+    <span class="overline">Get in touch</span>
+    <h2>Advance science together with <span class="acc">MBC</span></h2>
+    <p>Whether you are a researcher, an institution, a student or a supporter — there is a place for you at the Molecular Biology Center.</p>
+    <div class="mbcx-cta-actions">
+      <a class="mbcx-cta-solid" href="/contact/">Schedule Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="mbcx-cta-ghost" href="/financial-resources/">Support Our Mission</a>
+    </div>
+    <div class="mbcx-cta-contact">
+      <div class="mbcx-cta-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Yaoundé, Cameroon</span>
+      </div>
+      <div class="mbcx-cta-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a href="tel:+237675573519">+237 675 57 35 19</a>
+      </div>
+      <div class="mbcx-cta-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:contact@molbiocam.org">contact@molbiocam.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var p=document.getElementById('mbcPartners'),c=document.getElementById('mbcContact');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.15});
+  if(p)io.observe(p);
+  if(c)io.observe(c);
+
+  var cv=document.getElementById('mbcCtaParticles');
+  if(cv){
+    var ctx=cv.getContext('2d'),W,H,DPR,pts=[];
+    var rs=function(){DPR=Math.min(window.devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);pts=[];var n=Math.min(50,Math.floor(W*H/25000));for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.5,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,a:Math.random()*.15+.05,c:Math.random()>.5?'38,166,154':'66,165,245'});};
+    rs();window.addEventListener('resize',rs);
+    var vis=true;new IntersectionObserver(function(e){vis=e[0].isIntersecting;}).observe(cv);
+    (function loop(){requestAnimationFrame(loop);if(!vis)return;ctx.clearRect(0,0,W,H);for(var i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle='rgba('+p.c+','+p.a+')';ctx.fill();}})();
+  }
+})();
+</script>

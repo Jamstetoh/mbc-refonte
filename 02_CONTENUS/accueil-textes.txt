@@ -1,0 +1,114 @@
+====================================================
+MBC - TEXTES PAGE D'ACCUEIL (version EN, langue du site)
+Chaque section = 1 bloc de code futur dans 04_CODE/sections/
+====================================================
+
+[SECTION 01 - HERO]
+Overline : Molecular Biology Center - Yaounde, Cameroon
+H1 : Closing the Gap Between Africa's Health Problems and Scientific Solutions
+Sous-titre : The Molecular Biology Center (MBC) is a non-profit research
+organization dedicated to advancing biotechnology through research,
+training and innovation - for Africa and the world.
+Bouton 1 : Explore Our Research
+Bouton 2 : Partner With Us
+
+[SECTION 02 - CHIFFRES CLES]
+1  -> International patent (CspCI - WO200594516A)
+7  -> Restriction enzymes commercialized by New England Biolabs (USA)
+2000 -> Bacterial isolates in the Cameroon Type Collection
+4  -> World-renowned scientific advisors guiding our work
+
+[SECTION 03 - A PROPOS]
+Overline : About MBC
+Titre : A Center Built on One Conviction: Science Must Serve Communities
+Texte : In developing countries, the gap between health problems and
+scientific solutions is wide and deep - and research receives little
+support. Created to change that, the Molecular Biology Center brings
+together a specialized, multidisciplinary team - creative, innovative,
+dedicated and hard-working - to develop scientific research in the
+growing field of biotechnology.
+Nos 4 missions (puces) :
+ - Strengthen the field of Molecular Biology through training and workshops
+ - Promote biotechnology and applied research
+ - Discover new restriction enzymes
+ - Develop affordable diagnostic tools and molecular biology products
+Bouton : Learn More About Us
+
+[SECTION 04 - RECHERCHE]
+Overline : Our Research
+Titre : Science With Real-World Impact
+Carte 1 - Tropical Diseases : Diagnosis and epidemiology of malaria,
+tuberculosis and dengue fever, plus drug discovery from Cameroon's plant
+biodiversity - including plant extracts with proven anti-HIV activity
+in cell culture.
+Carte 2 - Restriction Enzymes : Discovery and characterization of new
+restriction enzymes, including the patented CspCI. Seven of our enzymes
+are commercialized worldwide by New England Biolabs (USA).
+Carte 3 - Local Scientific Manufacturing : Reducing the cost of basic
+laboratory equipment through local manufacturing and maintenance
+capacity - so that every African laboratory can thrive.
+Bandeau highlight : Cameroon Bacterial Type Collection - 2,000 isolates
+recorded and growing.
+Bouton : Discover Our Research
+
+[SECTION 05 - SERVICES]
+Overline : Our Services
+Titre : Expertise at the Service of Your Projects
+Carte 1 - Scientific Consultancy : Collaboration on and execution of
+research projects, from design to delivery.
+Carte 2 - Biological Materials from Africa : Provision of authenticated
+biological materials for research and industry.
+Carte 3 - Biotechnology Workshops : Hands-on training for university
+students and professionals.
+Carte 4 - Seminars & Conferences : Scientific events, workshops and
+round-table meetings.
+Note : All our services are tailored to your project - request a
+personalized quote. (REMPLACE les anciens "$20/mo")
+Bouton : Request a Quote
+
+[SECTION 06 - FORMATIONS]
+Overline : Training Activities
+Titre : Training the Next Generation of African Scientists
+Texte : Lectures, conferences, seminars, workshops and round-table
+meetings - plus a science library open to subscribers and to the public.
+Bouton : View Training Programs
+
+[SECTION 07 - FONDATRICE]
+Overline : Our Founder
+Titre : Prof. Celine Nkenfou
+Texte : A pioneering Cameroonian molecular biologist, Prof. Nkenfou has
+built a distinguished career spanning parasitology, molecular diagnostics
+and biotechnology capacity-building. Her academic and research leadership
+has significantly shaped biomedical science in Central Africa.
+Bouton : Read Her Story
+
+[SECTION 08 - CONSEIL SCIENTIFIQUE & PARTENAIRES]
+Overline : Guided by World-Class Science
+Titre : Our Scientific Advisory Board
+Pr. Barthelemy Nyasse - University of Yaounde I, Cameroon
+Pr. Alex Matter - Esperanza Medicines Foundation, Singapore
+Pr. Eva Harris - UC Berkeley / Sustainable Science Institute, USA
+Pr. Marcel Tanner - Swiss Tropical and Public Health Institute, Basel
+Bandeau partenaires : New England Biolabs - Sustainable Science Institute
+- Swiss TPH - UC Berkeley - YaBiNaPa Graduate School - SBI Japan
+Bouton : Meet Our Partners
+
+[SECTION 09 - ACTUALITES]
+Overline : News
+Titre : Life at the Center
+(3 cartes : In the laboratory / In the office / Publications)
+NOTE POUR LA CLIENTE : publier 3 actualites recentes des la mise en ligne
+(le site actuel date de nov. 2023 = image abandonnee)
+
+[SECTION 10 - CTA FINAL]
+Titre : Let's Advance Science Together
+Texte : Whether you are a researcher, an institution, a student or a
+supporter - there is a place for you at the Molecular Biology Center.
+Bouton 1 : Partner With Us
+Bouton 2 : Support Our Mission
+
+[FOOTER]
+Molecular Biology Center - Yaounde, Cameroon
+Tel : +237 675 57 35 19
+Liens rapides : About / Research / Training / Services / Partners / News / Contact
+Copyright : (c) 2026 Molecular Biology Center. All rights reserved.
