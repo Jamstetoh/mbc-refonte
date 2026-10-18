@@ -1,0 +1,18 @@
+# Fichiers système
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+$RECYCLE.BIN/
+System Volume Information/
+
+# Fichiers temporaires
+*.tmp
+*.log
