@@ -3,122 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>New Life Clinic | Molecular Biology Center</title>
+<title>Molecular Biology Center</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/mbc-core.css">
 <style>
-.nlc-section{padding:100px 24px;}
-.nlc-section.alt{background:#F7FBFA;}
-.nlc-inner{max-width:1240px;margin:0 auto;}
-.sec-head{text-align:center;max-width:680px;margin:0 auto 56px;}
-.overline{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#00695C;margin-bottom:14px;display:block;}
-.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.02em;margin:0 0 14px;}
-.sec-head p{color:rgba(16,42,67,.65);font-size:1.02rem;line-height:1.7;margin:0;}
-.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.pillar-card{background:#fff;border:1px solid rgba(16,42,67,.06);border-radius:20px;padding:32px 26px;box-shadow:0 4px 20px rgba(16,42,67,.05);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease;}
-.pillar-card:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(16,42,67,.12);}
-.pillar-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
-.pillar-icon svg{width:26px;height:26px;}
-.tint-teal{background:rgba(0,105,92,.1);color:#00695C;}
-.tint-rose{background:rgba(194,64,94,.1);color:#C2405E;}
-.tint-amber{background:rgba(180,83,9,.1);color:#B45309;}
-.pillar-card h3{font-size:1.15rem;margin:0 0 10px;}
-.pillar-card p{font-size:.92rem;color:rgba(16,42,67,.68);margin:0;}
-.nlc-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;}
-.nlc-tab{padding:12px 22px;border-radius:50px;border:1.5px solid rgba(16,42,67,.15);background:#fff;color:#102A43;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;}
-.nlc-tab svg{width:16px;height:16px;}
-.nlc-tab:hover{border-color:#00695C;color:#00695C;transform:translateY(-2px);}
-.nlc-tab.active{background:#00695C;border-color:#00695C;color:#fff;box-shadow:0 8px 20px rgba(0,105,92,.25);}
-.nlc-panel{display:none;background:#fff;border:1px solid rgba(16,42,67,.06);border-radius:20px;padding:36px;box-shadow:0 6px 28px rgba(16,42,67,.06);}
-.nlc-panel.active{display:block;animation:panelIn .5s cubic-bezier(.16,1,.3,1);}
-@keyframes panelIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
-.nlc-panel h3{font-size:1.4rem;margin:0 0 8px;}
-.panel-sub{color:rgba(16,42,67,.6);margin:0 0 24px;font-size:.95rem;}
-.svc-list{list-style:none;display:grid;gap:14px;margin:0 0 26px;padding:0;}
-.svc-list li{background:#F7FBFA;border:1px solid rgba(16,42,67,.06);border-radius:14px;padding:16px 18px 16px 46px;position:relative;font-size:.93rem;color:#33475E;line-height:1.55;}
-.svc-list li::before{content:"";position:absolute;left:20px;top:22px;width:8px;height:8px;border-radius:50%;background:#26A69A;}
-.svc-list b{color:#102A43;}
-.pick-service{display:inline-flex;align-items:center;gap:8px;background:#00695C;color:#fff;border:none;cursor:pointer;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;transition:all .3s;font-family:'Montserrat',sans-serif;}
-.pick-service:hover{background:#005a50;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,105,92,.25);}
-.pick-service svg{width:15px;height:15px;}
-.tm-founder{display:grid;grid-template-columns:320px 1fr;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 28px rgba(16,42,67,.07);border:1px solid rgba(16,42,67,.06);margin-bottom:32px;}
-.tm-founder-media{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#0E3A34,#102A43);}
-.tm-founder-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 28%;transition:transform .9s cubic-bezier(.16,1,.3,1);}
+.mbcx-missions{background:#fff;padding:110px 24px;}
+.mbcx-missions-inner{max-width:1240px;margin:0 auto;}
+.mbcx-overline{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#00695C;margin-bottom:14px;display:block;}
+.mission-intro{text-align:center;margin-bottom:60px;}
+.mission-intro h2{font-size:clamp(1.8rem,3.4vw,2.8rem);letter-spacing:-.02em;margin:0 0 14px;}
+.mission-intro p{color:rgba(16,42,67,.65);font-size:1.05rem;max-width:60ch;margin:0 auto;}
+.mission-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:40px;}
+.mission-card-large{display:flex;flex-direction:column;justify-content:flex-end;padding:32px;border-radius:20px;min-height:380px;position:relative;overflow:hidden;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease;}
+.mission-card-large:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(16,42,67,.15);}
+.mission-card-large::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;opacity:.4;transition:opacity .3s,transform .6s ease;}
+.mission-card-large:hover::before{opacity:.5;transform:scale(1.05);}
+.mission-card-large::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,34,57,.95) 0%,rgba(11,34,57,.6) 50%,rgba(11,34,57,.2) 100%);}
+.mission-card-large>*{position:relative;z-index:2;}
+.mission-card-large .mbcx-overline{color:#8FE3D5;margin-bottom:8px;}
+.mission-card-large h3{font-size:clamp(1.3rem,2.5vw,1.8rem);color:#fff;margin:0 0 12px;}
+.mission-card-large p{color:rgba(232,244,253,.85);font-size:.95rem;line-height:1.6;margin:0 0 20px;}
+.mission-card-large .card-arrow{display:inline-flex;align-items:center;gap:8px;color:#8FE3D5;font-weight:600;font-size:.9rem;}
+.mission-card-large .card-arrow svg{width:16px;height:16px;transition:transform .3s;}
+.mission-card-large:hover .card-arrow svg{transform:translateX(4px);}
+.card-research::before{background-image:url('https://molbiocam.org/wp-content/uploads/2023/11/1408_001-2.jpg');}
+.card-training::before{background-image:url('https://molbiocam.org/wp-content/uploads/2023/11/1409_001-a.jpg');}
+.card-clinic::before{background-image:url('/photos/hero-lab.jpg');}
+.services-accordion{max-width:600px;margin:0 auto;}
+.accordion-item{background:#F7FBFA;border-radius:16px;overflow:hidden;border:1px solid rgba(16,42,67,.06);margin-bottom:16px;}
+.accordion-header{padding:24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;user-select:none;transition:background .2s;}
+.accordion-header:hover{background:rgba(0,105,92,.04);}
+.accordion-header h4{font-size:1.15rem;margin:0;}
+.accordion-icon{width:24px;height:24px;color:#00695C;transition:transform .3s ease;flex-shrink:0;}
+.accordion-item.open .accordion-icon{transform:rotate(180deg);}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1);}
+.accordion-item.open .accordion-body{max-height:500px;}
+.accordion-content{padding:0 24px 24px;}
+.services-list{list-style:none;padding:0;margin:0;counter-reset:svc;}
+.services-list li{counter-increment:svc;position:relative;padding:12px 0 12px 40px;border-top:1px solid rgba(16,42,67,.08);font-size:.92rem;color:#33475E;line-height:1.5;}
+.services-list li::before{content:"0" counter(svc);position:absolute;left:0;top:12px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;color:#00695C;}
+.mbcx-impact{background:#102A43;padding:80px 24px;}
+.mbcx-impact-inner{max-width:1240px;margin:0 auto;}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.impact-card{background:#fff;border-radius:20px;padding:36px 24px;text-align:center;}
+.impact-icon{width:56px;height:56px;border-radius:50%;background:#102A43;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+.impact-icon svg{width:28px;height:28px;color:#fff;}
+.impact-number{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(1.8rem,3vw,2.4rem);color:#102A43;margin:0 0 8px;line-height:1;}
+.impact-label{font-size:.9rem;color:rgba(16,42,67,.7);line-height:1.5;margin:0;word-wrap:break-word;}
+.mbcx-lead{background:#F7FBFA;padding:110px 24px;}
+.mbcx-lead-inner{max-width:1240px;margin:0 auto;}
+.tm-head{margin-bottom:44px;}
+.tm-head h2{font-size:clamp(1.8rem,3.2vw,2.6rem);letter-spacing:-.02em;margin:0 0 14px;}
+.tm-head p{color:rgba(16,42,67,.65);font-size:1rem;max-width:64ch;margin:0;}
+.tm-founder{display:grid;grid-template-columns:320px 1fr;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 28px rgba(16,42,67,.07);border:1px solid rgba(16,42,67,.06);margin-bottom:28px;}
+.tm-founder-media{position:relative;min-height:340px;background:linear-gradient(160deg,#0E3A34,#102A43);}
+.tm-founder-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .9s cubic-bezier(.16,1,.3,1);}
 .tm-founder:hover .tm-founder-media img{transform:scale(1.05);}
 .tm-founder-media::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 60%,rgba(11,34,57,.4));}
-.tm-founder-body{padding:38px 42px;}
+.tm-founder-body{padding:42px 46px;}
 .tm-role{display:block;color:#00695C;font-weight:600;font-size:.9rem;margin:6px 0 16px;}
-.tm-founder-body h3{font-size:clamp(1.4rem,2.4vw,1.8rem);margin:0;}
-.tm-desc{position:relative;overflow:hidden;max-height:6.2em;transition:max-height .7s cubic-bezier(.16,1,.3,1);}
-.tm-desc p{color:rgba(16,42,67,.7);font-size:.95rem;line-height:1.7;margin:0 0 12px;}
+.tm-founder-body h3{font-size:clamp(1.4rem,2.4vw,1.9rem);margin:0;}
+.tm-founder-body p{color:rgba(16,42,67,.7);font-size:.98rem;line-height:1.7;margin:0 0 14px;max-width:62ch;}
+.tm-nobel{display:inline-flex;align-items:center;gap:10px;background:rgba(0,105,92,.08);border:1px solid rgba(0,105,92,.18);border-radius:12px;padding:10px 16px;margin-top:8px;}
+.tm-nobel svg{width:18px;height:18px;color:#00695C;flex-shrink:0;}
+.tm-nobel b{font-size:.85rem;color:#102A43;display:block;line-height:1.25;}
+.tm-nobel span{font-size:.72rem;color:rgba(16,42,67,.6);display:block;}
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-bottom:34px;}
+.tm-card{position:relative;background:#fff;border-radius:16px;border:1px solid rgba(16,42,67,.06);box-shadow:0 4px 20px rgba(16,42,67,.05);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease;}
+.tm-card:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(16,42,67,.12);}
+.tm-media{position:relative;aspect-ratio:4/3;border-radius:16px 16px 0 0;background:linear-gradient(135deg,#0E3A34,#102A43);overflow:hidden;}
+.tm-media::before{content:attr(data-initials);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:3.2rem;color:rgba(255,255,255,.16);z-index:1;}
+.tm-media::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px;border-radius:inherit;z-index:1;}
+.tm-imgwrap{position:absolute;inset:0;z-index:2;}
+.tm-imgwrap img{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;transition:transform .9s cubic-bezier(.16,1,.3,1);}
+.tm-card:hover .tm-imgwrap img{transform:scale(1.07);}
+.tm-badge{position:absolute;left:24px;bottom:-21px;z-index:3;width:52px;height:52px;transform:rotate(45deg);background:linear-gradient(135deg,#00695C,#26A69A);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,105,92,.35);transition:transform .45s cubic-bezier(.16,1,.3,1),border-radius .45s ease;}
+.tm-badge span{transform:rotate(-45deg);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff;}
+.tm-card:hover .tm-badge{transform:rotate(0deg);border-radius:50%;}
+.tm-body{padding:38px 26px 28px;}
+.tm-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;}
+.tm-kicker{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(16,42,67,.45);}
+.tm-country{padding:5px 12px;border-radius:50px;background:rgba(0,105,92,.08);color:#00695C;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
+.tm-body h4{font-size:1.12rem;margin:0 0 10px;line-height:1.3;}
+.tm-body p{color:rgba(16,42,67,.65);font-size:.88rem;line-height:1.6;margin:0;}
+.tm-desc{position:relative;overflow:hidden;max-height:4.6em;transition:max-height .7s cubic-bezier(.16,1,.3,1);}
+.tm-desc p{margin:0 0 10px !important;}
 .tm-desc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 85%);pointer-events:none;transition:opacity .4s;}
-.tm-founder.expanded .tm-desc{max-height:1600px;}
-.tm-founder.expanded .tm-desc::after{opacity:0;}
-.tm-more-btn{display:inline-flex;align-items:center;gap:6px;margin-top:6px;background:none;border:none;cursor:pointer;color:#00695C;font-weight:600;font-size:.85rem;font-family:'Montserrat',sans-serif;padding:0;}
-.tm-more-btn:hover{text-decoration:underline;}
+.tm-card.expanded .tm-desc{max-height:1600px;}
+.tm-card.expanded .tm-desc::after{opacity:0;}
+.tm-more-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:none;border:none;cursor:pointer;color:#00695C;font-weight:600;font-size:.82rem;font-family:'Montserrat',sans-serif;padding:0;}
+.tm-more-btn:hover{color:#005a50;text-decoration:underline;}
 .tm-more-btn svg{width:14px;height:14px;transition:transform .3s;}
-.tm-founder.expanded .tm-more-btn svg{transform:rotate(180deg);}
-.care-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
-.care-chip{padding:10px 18px;border-radius:50px;background:#fff;border:1px solid rgba(0,105,92,.2);color:#00695C;font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .3s;}
-.care-chip:hover{background:#00695C;color:#fff;transform:translateY(-2px);}
-.care-chip svg{width:15px;height:15px;}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.info-card{background:#fff;border-radius:20px;padding:30px 26px;border:1px solid rgba(16,42,67,.06);box-shadow:0 4px 20px rgba(16,42,67,.05);}
-.info-card h3{font-size:1.1rem;margin:0 0 18px;display:flex;align-items:center;gap:10px;}
-.info-card h3 svg{width:20px;height:20px;color:#00695C;flex-shrink:0;}
-.hours-list{list-style:none;margin:0;padding:0;}
-.hours-list li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(16,42,67,.08);font-size:.9rem;}
-.hours-list li:last-child{border:none;}
-.hours-list b{color:#102A43;font-weight:600;}
-.hours-list span{color:rgba(16,42,67,.65);text-align:right;}
-.hours-list .hl{color:#C2405E;font-weight:700;}
-.info-card p{font-size:.9rem;color:rgba(16,42,67,.68);margin:0 0 14px;}
-.visit-list{list-style:none;margin:0;padding:0;}
-.visit-list li{position:relative;padding-left:24px;margin-bottom:10px;font-size:.9rem;color:#33475E;line-height:1.5;}
-.visit-list li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:2px;background:#26A69A;}
-.map-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1.5px solid rgba(0,105,92,.4);border-radius:50px;color:#00695C;font-weight:600;font-size:.88rem;transition:all .3s;margin-top:6px;}
-.map-btn:hover{background:#00695C;color:#fff;transform:translateY(-2px);}
-.map-btn svg{width:15px;height:15px;}
-.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.mini-chip{padding:6px 12px;border-radius:50px;background:rgba(0,105,92,.08);color:#00695C;font-size:.75rem;font-weight:600;}
-.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px;}
-.quote-card{background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(16,42,67,.06);box-shadow:0 4px 20px rgba(16,42,67,.05);position:relative;}
-.quote-card::before{content:"\201C";font-family:'Montserrat',sans-serif;font-size:3rem;color:rgba(0,105,92,.25);position:absolute;top:14px;left:20px;line-height:1;}
-.quote-card p{font-size:.92rem;color:rgba(16,42,67,.75);margin:26px 0 16px;font-style:italic;}
-.quote-card span{font-size:.78rem;font-weight:700;color:#00695C;text-transform:uppercase;letter-spacing:.08em;}
-.commit-box{background:#102A43;border-radius:20px;padding:36px;color:#fff;}
-.commit-box h3{color:#fff;font-size:1.2rem;margin:0 0 20px;}
-.commit-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.commit-list li{position:relative;padding-left:32px;font-size:.9rem;color:rgba(232,244,253,.85);line-height:1.55;}
-.commit-list li::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:rgba(38,166,154,.25);border:2px solid #26A69A;}
-.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;}
-.book-side h3{font-size:1.5rem;margin:0 0 14px;}
-.book-side>p{color:rgba(16,42,67,.68);font-size:.98rem;margin:0 0 28px;}
-.book-item{display:flex;align-items:center;gap:14px;padding:16px 18px;background:#fff;border:1px solid rgba(16,42,67,.06);border-radius:14px;margin-bottom:12px;transition:all .3s;}
-.book-item:hover{transform:translateX(6px);box-shadow:0 8px 24px rgba(16,42,67,.08);}
-.book-item-ico{width:42px;height:42px;border-radius:12px;background:rgba(0,105,92,.1);color:#00695C;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.book-item-ico svg{width:20px;height:20px;}
-.book-item b{display:block;font-size:.92rem;color:#102A43;}
-.book-item span{font-size:.82rem;color:rgba(16,42,67,.6);}
-.book-form{background:#fff;border-radius:20px;padding:32px;border:1px solid rgba(16,42,67,.06);box-shadow:0 10px 30px rgba(16,42,67,.08);display:grid;gap:16px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.book-form label{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(16,42,67,.55);display:block;margin-bottom:6px;}
-.book-form input,.book-form select,.book-form textarea{width:100%;padding:13px 16px;border-radius:12px;border:1.5px solid rgba(16,42,67,.15);font-family:'Montserrat',sans-serif;font-size:.92rem;color:#102A43;background:#F8FCFB;transition:border .2s,box-shadow .2s;outline:none;}
-.book-form input:focus,.book-form select:focus,.book-form textarea:focus{border-color:#00695C;box-shadow:0 0 0 3px rgba(0,105,92,.12);background:#fff;}
-.book-form textarea{resize:vertical;min-height:90px;}
-.submit-btn{width:100%;justify-content:center;padding:16px 24px;font-size:1rem;}
-.form-note{font-size:.78rem;color:rgba(16,42,67,.5);text-align:center;margin:0;}
-@media(max-width:960px){.pillar-grid,.info-grid,.quote-grid{grid-template-columns:1fr;}.commit-list{grid-template-columns:1fr;}.book-grid{grid-template-columns:1fr;}.tm-founder{grid-template-columns:1fr;}.tm-founder-media{aspect-ratio:4/5;max-height:520px;}.tm-founder-media img{object-position:35% 22%;}.tm-founder-body{padding:28px 24px;}}
-@media(max-width:430px){.nlc-section{padding:60px 16px !important;}.sec-head h2{font-size:clamp(1.4rem,6vw,1.8rem) !important;}.sec-head p{font-size:.9rem !important;}.nlc-tab{padding:10px 16px;font-size:.82rem;}.nlc-panel{padding:24px 18px !important;}.nlc-panel h3{font-size:1.2rem !important;}.svc-list li{padding:14px 14px 14px 40px;font-size:.88rem;}.svc-list li::before{left:16px;top:20px;}.tm-founder-body{padding:20px 16px !important;}.tm-founder-body h3{font-size:1.3rem !important;}.tm-founder-media{aspect-ratio:4/5 !important;max-height:460px !important;}.info-card{padding:24px 18px !important;}.commit-box{padding:24px 18px !important;}.book-form{padding:22px 16px !important;}.form-row{grid-template-columns:1fr !important;}}
+.tm-card.expanded .tm-more-btn svg{transform:rotate(180deg);}
+.ld-link{display:inline-flex;align-items:center;gap:8px;color:#00695C;font-weight:600;font-size:.92rem;text-decoration:none;}
+.ld-link svg{width:15px;height:15px;transition:transform .25s;}
+.ld-link:hover svg{transform:translateX(4px);}
+.ld-link:hover{text-decoration:underline;}
+.mbcx-partners{background:#fff;padding:110px 24px;}
+.mbcx-partners-inner{max-width:800px;margin:0 auto;text-align:center;}
+.partners-head{margin-bottom:48px;}
+.partners-head h2{font-size:clamp(1.8rem,3.2vw,2.4rem);margin:0 0 14px;}
+.partners-head p{color:rgba(16,42,67,.65);font-size:1rem;max-width:56ch;margin:0 auto;}
+.partner-logo{max-width:320px;width:100%;height:auto;margin:0 auto;display:block;}
+.mbcx-cta-final{background:linear-gradient(180deg,#F7FBFA 0%,#E0F2F1 100%);padding:140px 24px;position:relative;overflow:hidden;}
+.mbcx-cta-final::before{content:"";position:absolute;width:700px;height:700px;right:-250px;top:-250px;background:radial-gradient(circle,rgba(0,105,92,.12),transparent 65%);border-radius:50%;}
+.mbcx-cta-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;text-align:center;}
+.mbcx-cta-inner .overline{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00695C;margin-bottom:20px;display:block;}
+.mbcx-cta-inner h2{font-size:clamp(1.8rem,4.2vw,3.4rem);letter-spacing:-.02em;line-height:1.1;margin:0 0 24px;}
+.mbcx-cta-inner h2 .acc{background:linear-gradient(90deg,#00695C,#26A69A);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.mbcx-cta-inner p{color:rgba(16,42,67,.7);font-size:1.1rem;margin:0 auto 48px;max-width:600px;}
+.mbcx-cta-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+.mbcx-cta-solid{display:inline-flex;align-items:center;gap:12px;background:#00695C;color:#fff;padding:18px 38px;border-radius:50px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 14px 34px rgba(0,105,92,.3);}
+.mbcx-cta-solid:hover{background:#005a50;transform:translateY(-3px);box-shadow:0 20px 44px rgba(0,105,92,.4);}
+.mbcx-cta-solid svg{width:18px;height:18px;transition:transform .3s;}
+.mbcx-cta-solid:hover svg{transform:translateX(5px);}
+.mbcx-cta-ghost{display:inline-flex;align-items:center;padding:18px 36px;border:1.5px solid rgba(16,42,67,.25);border-radius:50px;color:#102A43;font-weight:600;font-size:1rem;text-decoration:none;background:rgba(255,255,255,.6);transition:all .3s;}
+.mbcx-cta-ghost:hover{border-color:#00695C;color:#00695C;background:#fff;transform:translateY(-3px);}
+.mbcx-cta-contact{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:48px;border-top:1px solid rgba(16,42,67,.12);}
+.mbcx-cta-contact-item{display:flex;align-items:center;gap:12px;color:rgba(16,42,67,.65);font-size:.92rem;}
+.mbcx-cta-contact-item svg{width:18px;height:18px;color:#00695C;flex-shrink:0;}
+.mbcx-cta-contact-item a{color:#102A43;font-weight:500;transition:color .3s;}
+.mbcx-cta-contact-item a:hover{color:#00695C;}
+@media(max-width:960px){.mission-grid{grid-template-columns:1fr;}.impact-grid{grid-template-columns:repeat(2,1fr);}.tm-founder{grid-template-columns:1fr;}.tm-founder-media{min-height:0;aspect-ratio:4/3;}.tm-founder-body{padding:30px 26px;}}
+@media(max-width:430px){.mbcx-missions,.mbcx-lead,.mbcx-partners,.mbcx-cta-final{padding:60px 16px !important;}.mission-intro h2,.tm-head h2,.partners-head h2,.mbcx-cta-inner h2{font-size:clamp(1.4rem,6vw,1.8rem) !important;}.mission-intro p,.tm-head p,.partners-head p{font-size:.9rem !important;}.mbcx-overline{font-size:.7rem !important;}.mission-card-large{min-height:300px !important;padding:24px !important;}.mission-card-large h3{font-size:1.3rem !important;}.impact-grid{grid-template-columns:1fr 1fr !important;gap:16px !important;}.impact-card{padding:24px 16px !important;border-radius:16px !important;}.impact-icon{width:48px !important;height:48px !important;margin-bottom:16px !important;}.impact-icon svg{width:24px !important;height:24px !important;}.impact-number{font-size:clamp(1.4rem,5vw,1.8rem) !important;}.impact-label{font-size:.82rem !important;}.tm-founder-body{padding:20px 16px !important;}.tm-founder-body h3{font-size:1.3rem !important;}.tm-founder-body p{font-size:.9rem !important;}.tm-grid{grid-template-columns:1fr !important;gap:20px !important;}.tm-body{padding:24px 16px 20px !important;}.tm-body h4{font-size:1.05rem !important;}.tm-body p{font-size:.85rem !important;}.mbcx-cta-contact{flex-direction:column !important;align-items:center !important;gap:12px !important;padding-top:32px !important;}.mbcx-cta-actions{flex-direction:column !important;align-items:stretch !important;gap:12px !important;margin-bottom:40px !important;}.mbcx-cta-solid,.mbcx-cta-ghost{justify-content:center !important;padding:14px 24px !important;}}
+@media(max-width:360px){.impact-grid{grid-template-columns:1fr !important;}.impact-card{padding:20px 16px !important;}}
 </style>
 </head>
 <body>
 <header class="mbc-header" id="mbcHeader">
   <div class="mbc-header-inner">
-    <a href="index.html" class="mbc-logo"><img src="/photos/mbc-logo.png" alt="Molecular Biology Center" class="mbc-logo-img" onerror="this.style.display='none';"></a>
+    <a href="#home" class="mbc-logo"><img src="/photos/mbc-logo.png" alt="Molecular Biology Center" class="mbc-logo-img" onerror="this.style.display='none';"></a>
     <nav class="mbc-nav">
-      <a href="index.html">MBC Home</a><a href="#services">Services</a><a href="#team">Our Team</a><a href="#info">Practical Info</a>
-      <a href="#book" class="mbc-nav-cta">Book Now</a>
+      <a href="#home">Home</a><a href="#research">Research</a><a href="#training">Training</a><a href="#team">Team</a><a href="#partners">Partners</a>
+      <a href="#mbcContact" class="mbc-nav-cta">Contact Us</a>
     </nav>
     <button class="mbc-menu-toggle" id="mbcMenuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
@@ -126,235 +143,160 @@
 <div class="mbc-backdrop" id="mbcBackdrop"></div>
 <a href="#" class="gb-back" id="gbBack" aria-label="Go back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg><span>Back</span></a>
 <div class="mbc-mobile-menu" id="mbcMobileMenu">
-  <a href="index.html" class="mbc-mobile-link" data-num="01"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>MBC Home</a>
-  <a href="#services" class="mbc-mobile-link" data-section="services" data-num="02"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg>Services</a>
-  <a href="#team" class="mbc-mobile-link" data-section="team" data-num="03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Our Team</a>
-  <a href="#info" class="mbc-mobile-link" data-section="info" data-num="04"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Practical Info</a>
-  <a href="#book" class="mbc-nav-cta mbc-mobile-link" data-section="book" data-num="05"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book Now</a>
-  <div class="mbc-menu-footer"><p>New Life Clinic, Yaoundé</p><p><a href="tel:+237678094304">+237 678 09 43 04</a></p><p>© 2026 Molecular Biology Center</p></div>
+  <a href="#home" class="mbc-mobile-link" data-section="home" data-num="01"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+  <a href="#research" class="mbc-mobile-link" data-section="research" data-num="02"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Research</a>
+  <a href="#training" class="mbc-mobile-link" data-section="training" data-num="03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Training</a>
+  <a href="#team" class="mbc-mobile-link" data-section="team" data-num="04"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Team</a>
+  <a href="#partners" class="mbc-mobile-link" data-section="partners" data-num="05"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Partners</a>
+  <a href="#mbcContact" class="mbc-nav-cta mbc-mobile-link" data-section="mbcContact" data-num="06"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact Us</a>
+  <div class="mbc-menu-footer"><p>Yaoundé, Cameroon</p><p><a href="tel:+237678094304">+237 678 09 43 04</a></p><p>© 2026 Molecular Biology Center</p></div>
 </div>
 
 <section class="gb-hero" id="home">
   <div class="gb-hero-bg">
-    <img class="gb-hero-img" src="/photos/clinic-hero.jpg" alt="A caregiver holding a patient's hands at New Life Clinic" onerror="this.src='/photos/hero-lab.jpg';">
+    <img class="gb-hero-img" src="/photos/hero-lab.jpg" alt="MBC main laboratory in Yaoundé">
     <div class="gb-hero-overlay"></div>
     <span class="gb-glow gb-glow-1"></span><span class="gb-glow gb-glow-2"></span>
   </div>
   <canvas class="gb-particles" id="gbParticles"></canvas>
   <div class="gb-hero-inner">
-    <span class="gb-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Soigner avec humanité, innover pour la communauté</span>
-    <h1>Modern medicine, <span class="acc">human care</span>, at the heart of Yaoundé</h1>
-    <p class="gb-sub">From everyday consultations to preventive check-ups, mother and child care, mental well-being and on-site laboratory testing, we take care of you and your family with listening and rigor.</p>
+    <span class="gb-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Santé pour tous, science au service de l'humain</span>
+    <h1>Molecular Biology Research for <span class="acc">Global Health Equity</span></h1>
+    <p class="gb-sub">The Molecular Biology Center conducts applied research on tropical diseases, discovers novel restriction enzymes, and builds biotechnology capacity across Central Africa.</p>
     <div class="gb-cta">
-      <a class="gb-btn-solid" href="#book">Book an appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="gb-btn-ghost" href="https://wa.me/237697955844" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</a>
+      <a class="gb-btn-solid" href="#research">Research Focus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="gb-btn-ghost" href="/contact/">Contact Us</a>
     </div>
-    <div class="gb-contactline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Emergencies: <a href="tel:+237678094304">+237 678 09 43 04</a> (24/7 phone line)</span></div>
+    <div class="gb-contactline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Yaoundé, Cameroon · <a href="tel:+237678094304">+237 678 09 43 04</a></span></div>
   </div>
   <div class="gb-scrollhint"></div>
 </section>
 
-<section class="nlc-section" id="vision">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Our approach</span>
-      <h2>A sanctuary of global health, adapted to urban life</h2>
-      <p>New Life Clinic is not only a curative care center. It is a place where prevention, listening and modern organization come together for your well-being.</p>
+<section class="mbcx-missions" id="research">
+  <div class="mbcx-missions-inner">
+    <div class="mission-intro mbcx-reveal">
+      <span class="mbcx-overline">What we do</span>
+      <h2>Science that serves the community</h2>
+      <p>Two complementary missions: produce scientific knowledge, and transfer it to the people who need it.</p>
     </div>
-    <div class="pillar-grid">
-      <div class="pillar-card mbcx-reveal"><div class="pillar-icon tint-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Clinical excellence and active prevention</h3><p>Health is won upstream: early screening, personalized executive check-ups and rigorous follow-up of chronic diseases such as hypertension and diabetes.</p></div>
-      <div class="pillar-card mbcx-reveal"><div class="pillar-icon tint-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h3>Humanized care and listening</h3><p>Every patient, from young mothers to seniors, feels listened to, respected and accompanied with unwavering kindness at every step of the care journey.</p></div>
-      <div class="pillar-card mbcx-reveal"><div class="pillar-icon tint-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg></div><h3>Organizational innovation</h3><p>Modern management methods, digital accessibility and responsiveness adapted to the demands of the capital, inspired by international public health research.</p></div>
+    <div class="mission-grid">
+      <a href="/research-focus/" class="mission-card-large card-research mbcx-reveal">
+        <span class="mbcx-overline">Research</span>
+        <h3>Research Institute</h3>
+        <p>Fundamental and applied research on the diseases that weigh heaviest on Central Africa, from diagnosis to drug discovery.</p>
+        <span class="card-arrow">Explore research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+      <a href="#training" class="mission-card-large card-training mbcx-reveal">
+        <span class="mbcx-overline">Education</span>
+        <h3>Training & Capacity Building</h3>
+        <p>Hands-on biotechnology workshops, seminars and science library for students and professionals.</p>
+        <span class="card-arrow">View programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+      <a href="new-life-clinic.html" class="mission-card-large card-clinic mbcx-reveal">
+        <span class="mbcx-overline">Consultations</span>
+        <h3>New Life Clinic</h3>
+        <p>Real-time patient consultations, laboratory investigations and management services for members of the community.</p>
+        <span class="card-arrow">Visit clinic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
     </div>
-  </div>
-</section>
-
-<section class="nlc-section alt" id="services">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Our services</span>
-      <h2>Four poles of care for the whole family</h2>
-      <p>Explore our departments and book the service that fits your needs in one tap.</p>
-    </div>
-    <div class="nlc-tabs mbcx-reveal">
-      <button class="nlc-tab active" data-tab="panel-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg> Consultations & General Care</button>
-      <button class="nlc-tab" data-tab="panel-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Mother & Child Health</button>
-      <button class="nlc-tab" data-tab="panel-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Prevention & Well-being</button>
-      <button class="nlc-tab" data-tab="panel-d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/><path d="M6 14h12"/></svg> Exams & Laboratory</button>
-    </div>
-    <div class="nlc-panel active" id="panel-a">
-      <h3>Consultations & General Care</h3>
-      <p class="panel-sub">Everyday medicine for the whole family, with continuity and rigor.</p>
-      <ul class="svc-list">
-        <li><b>General medicine and routine consultations:</b> care for common conditions for children, adults and seniors.</li>
-        <li><b>Proximity emergencies and continuous care:</b> rapid management of minor trauma and light medical emergencies.</li>
-        <li><b>Chronic disease follow-up (diabetes, hypertension):</b> dedicated support programs with a community-based, integrated approach.</li>
-      </ul>
-      <button class="pick-service" data-service="General consultation">Book this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-    </div>
-    <div class="nlc-panel" id="panel-b">
-      <h3>Mother & Child Health</h3>
-      <p class="panel-sub">A reassuring journey from pregnancy to childhood.</p>
-      <ul class="svc-list">
-        <li><b>Prenatal and postnatal consultations:</b> personalized support for expectant and new mothers.</li>
-        <li><b>Pediatric follow-up and vaccination:</b> growth monitoring and respect for the vaccination schedule in a caring setting.</li>
-        <li><b>Family planning and reproductive health:</b> tailored and confidential counseling for every stage of life.</li>
-      </ul>
-      <button class="pick-service" data-service="Prenatal consultation">Book this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-    </div>
-    <div class="nlc-panel" id="panel-c">
-      <h3>Prevention, Well-being & Innovation</h3>
-      <p class="panel-sub">What makes the clinic unique: preventing rather than curing.</p>
-      <ul class="svc-list">
-        <li><b>Preventive health check-ups:</b> screening packages adapted to age and sex (diabetes, hypertension, female cancers).</li>
-        <li><b>Therapeutic education and community workshops:</b> sessions on lifestyle, nutrition and stress management.</li>
-        <li><b>Psychological support and listening:</b> a mental health dimension integrated into whole-person care.</li>
-      </ul>
-      <button class="pick-service" data-service="Preventive check-up">Book this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-    </div>
-    <div class="nlc-panel" id="panel-d">
-      <h3>Exams & Laboratory</h3>
-      <p class="panel-sub">Fast, reliable results, explained with care.</p>
-      <ul class="svc-list">
-        <li><b>Rapid diagnostic tests:</b> malaria, HIV and blood glucose with results in minutes.</li>
-        <li><b>On-site sampling:</b> collections processed with the scientific rigor of the Molecular Biology Center.</li>
-        <li><b>Clear result delivery:</b> secure transmission with a medical explanation you can understand.</li>
-      </ul>
-      <button class="pick-service" data-service="Laboratory / rapid test">Book this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<section class="nlc-section" id="team">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Our medical team</span>
-      <h2>Professionals who put people first</h2>
-      <p>A multidisciplinary team united by one conviction: every patient deserves excellence and kindness.</p>
-    </div>
-    <article class="tm-founder mbcx-reveal-left" id="directorCard">
-      <div class="tm-founder-media"><img src="/photos/team-kelvine.jpg" alt="Dr. Nkenfou Pagnou Kelvine" loading="lazy"></div>
-      <div class="tm-founder-body">
-        <span class="overline">Medical Director</span>
-        <h3>Dr. Nkenfou Pagnou Kelvine</h3>
-        <span class="tm-role">General practitioner, Master in Public Health</span>
-        <div class="tm-desc">
-          <p>An exceptional general practitioner committed to health equity, Dr. Nkenfou Pagnou Kelvine embodies the new generation of African medical leaders who combine scientific rigor, field innovation and deep human empathy. A graduate in medicine from the Catholic University of Central Africa with a Master's degree in Public Health, she leads the New Life Clinic with a forward-thinking vision.</p>
-          <p>Having honed her clinical skills in district and university hospitals across Cameroon, she has acquired solid mastery of hospital management, primary health care and comprehensive patient care. Her leadership was recognized through her election as best female staff member at the Baham District Hospital, and through her responsibilities within Women in Global Health Cameroon, the African Leaders Malaria Alliance and leading research networks.</p>
-          <p>Under her guidance, the New Life Clinic positions itself not only as a curative care center, but as a true sanctuary of global health adapted to the urban rhythm of Yaoundé, built around clinical excellence, humanized care and organizational innovation.</p>
+    <div class="services-accordion mbcx-reveal">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+          <h4>Scientific Services</h4>
+          <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
         </div>
-        <button class="tm-more-btn"><span>See more</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            <ul class="services-list">
+              <li>Consultancy: collaboration and execution of research projects</li>
+              <li>Provision of biological materials from Africa</li>
+              <li>Biotechnology workshops for professionals</li>
+              <li>Seminars, conferences and workshops</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mbcx-impact" id="impact">
+  <div class="mbcx-impact-inner">
+    <div class="impact-grid">
+      <div class="impact-card mbcx-reveal-scale"><div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="impact-number"><span data-target="2000" data-suffix="+">0</span></div><p class="impact-label">Bacterial isolates in the Cameroon Type Collection</p></div>
+      <div class="impact-card mbcx-reveal-scale"><div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="impact-number"><span data-target="1" data-suffix="">0</span></div><p class="impact-label">Patented enzyme (CspCI, WO200594516A)</p></div>
+      <div class="impact-card mbcx-reveal-scale"><div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="impact-number"><span data-target="7" data-suffix="">0</span></div><p class="impact-label">Enzymes commercialized by New England Biolabs</p></div>
+      <div class="impact-card mbcx-reveal-scale"><div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="impact-number">Since 1996</div><p class="impact-label">Advancing biotechnology in Central Africa</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="mbcx-lead" id="team">
+  <div class="mbcx-lead-inner">
+    <div class="tm-head mbcx-reveal">
+      <span class="mbcx-overline">Our Team</span>
+      <h2>The people behind the science</h2>
+      <p>A multidisciplinary team of scientists and advisors, supported by a Board of Directors: CEO, Executive Director, Finance Administrator and Legal Advisor.</p>
+    </div>
+    <article class="tm-founder mbcx-reveal-left">
+      <div class="tm-founder-media"><img src="https://molbiocam.org/wp-content/uploads/2023/10/pr-Kenfou.jpg" alt="Pr. Céline Nkenfou" loading="lazy"></div>
+      <div class="tm-founder-body">
+        <span class="mbcx-overline">Founder</span>
+        <h3>Pr. Céline Nkenfou</h3>
+        <span class="tm-role">Parasitology, molecular biology</span>
+        <p>Pr. Céline Nkenfou founded the Molecular Biology Center in 1996. A pioneering Cameroonian molecular biologist, she has built a career spanning parasitology, molecular diagnostics and biotechnology capacity-building, shaping biomedical science across Central Africa.</p>
+        <p>Her doctoral work on restriction endonucleases was conducted under Dr. Richard Roberts, Nobel Laureate in Physiology or Medicine (1993), followed by a postdoctoral position as visiting scientist at the Novartis Institute for Tropical Diseases.</p>
+        <span class="tm-nobel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg><span><b>PhD with Dr. Richard Roberts</b><span>Nobel Laureate, Medicine 1993</span></span></span>
       </div>
     </article>
-    <div class="care-chips mbcx-reveal">
-      <span class="care-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg> General practitioners</span>
-      <span class="care-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Midwives & nurses</span>
-      <span class="care-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/><path d="M6 14h12"/></svg> Laboratory technicians</span>
-      <span class="care-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Psychologist</span>
-      <span class="care-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Community health workers</span>
-    </div>
-  </div>
-</section>
-
-<section class="nlc-section alt" id="info">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Patient space</span>
-      <h2>Practical information</h2>
-      <p>Everything you need to prepare your visit with peace of mind.</p>
-    </div>
-    <div class="info-grid">
-      <div class="info-card mbcx-reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Opening hours</h3>
-        <ul class="hours-list">
-          <li><b>Monday to Friday</b><span>7:30 am to 8:00 pm</span></li>
-          <li><b>Saturday</b><span>8:00 am to 6:00 pm</span></li>
-          <li><b>Sunday & holidays</b><span>9:00 am to 2:00 pm</span></li>
-          <li><b>Emergencies</b><span class="hl">24/7 phone line</span></li>
-        </ul>
-      </div>
-      <div class="info-card mbcx-reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Location & access</h3>
-        <p>New Life Clinic Center, Ngousso, behind Blue Pharmacy, Yaoundé.</p>
-        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Pharmacie+Blue+Ngousso+Yaounde" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Open in Google Maps</a>
-        <div class="chip-row"><span class="mini-chip">Private insurances</span><span class="mini-chip">Employer health plans</span><span class="mini-chip">Cash & Mobile Money</span></div>
-      </div>
-      <div class="info-card mbcx-reveal">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Prepare your visit</h3>
-        <ul class="visit-list">
-          <li>Bring a valid ID and your insurance card if applicable.</li>
-          <li>Carry your previous medical records and current prescriptions.</li>
-          <li>Arrive 10 minutes early for your first consultation.</li>
-          <li>Come fasting if you booked a blood test or check-up.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="nlc-section" id="community">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Testimonials & commitments</span>
-      <h2>Anchored in our community</h2>
-      <p>The trust of our patients and our proximity actions are the true measure of our work.</p>
-    </div>
-    <div class="quote-grid">
-      <div class="quote-card mbcx-reveal"><p>I came for a simple check-up and left with a clear plan for my health. For the first time, I felt truly listened to.</p><span>Patiente, Yaoundé</span></div>
-      <div class="quote-card mbcx-reveal"><p>The prenatal follow-up was exceptional: the team was available and reassuring from the first day until delivery.</p><span>Young mother, Mbankolo</span></div>
-      <div class="quote-card mbcx-reveal"><p>Fast testing, results explained the same day with kindness. I recommend this clinic without hesitation.</p><span>Patient, Etoudi</span></div>
-    </div>
-    <div class="commit-box mbcx-reveal-scale">
-      <h3>Our community commitments</h3>
-      <ul class="commit-list">
-        <li>Monthly free screening days for hypertension, diabetes and malaria in underserved neighborhoods.</li>
-        <li>Health education sessions in schools, churches and companies across Yaoundé.</li>
-        <li>Active collaboration with Women in Global Health Cameroon and African malaria leadership networks.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="nlc-section alt" id="book">
-  <div class="nlc-inner">
-    <div class="sec-head mbcx-reveal">
-      <span class="overline">Appointments</span>
-      <h2>Book your visit in one minute</h2>
-      <p>Fill the form and send it directly to our WhatsApp line, or call us. We confirm within the hour during opening times.</p>
-    </div>
-    <div class="book-grid">
-      <div class="book-side mbcx-reveal-left">
-        <h3>Prefer to talk to us?</h3>
-        <p>Our reception team answers every day, including Sundays and holidays.</p>
-        <a class="book-item" href="tel:+237678094304"><span class="book-item-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><b>+237 678 09 43 04</b><span>Call or SMS, 24/7 for emergencies</span></span></a>
-        <a class="book-item" href="https://wa.me/237697955844" target="_blank" rel="noopener"><span class="book-item-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span><span><b>WhatsApp</b><span>Fastest way to book and ask questions</span></span></a>
-        <a class="book-item" href="mailto:contact@molbiocam.org"><span class="book-item-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span><b>contact@molbiocam.org</b><span>For records, partnerships and reports</span></span></a>
-      </div>
-      <form class="book-form mbcx-reveal-right" id="bookForm">
-        <div class="form-row">
-          <div><label for="fName">Full name</label><input type="text" id="fName" name="name" placeholder="Your name" required></div>
-          <div><label for="fPhone">Phone</label><input type="tel" id="fPhone" name="phone" placeholder="+237 ..." required></div>
+    <div class="tm-grid">
+      <article class="tm-card mbcx-reveal">
+        <div class="tm-media" data-initials="AM"><span class="tm-imgwrap"><img src="/photos/team-matter.jpg" alt="Prof. Alex Matter" loading="lazy" onerror="this.style.display='none';"></span><span class="tm-badge"><span>AM</span></span></div>
+        <div class="tm-body">
+          <div class="tm-meta"><span class="tm-kicker">Team</span><span class="tm-country">Singapore</span></div>
+          <h4>Pr. Alex Matter</h4>
+          <div class="tm-desc"><p>Director, Experimental Therapeutic Centre (ETC). Co-founder & CEO, Esperanza Medicines Foundation.</p><p>A pioneer of translational medicine in Asia, Pr. Matter has led groundbreaking drug discovery programs for neglected infectious diseases, including dengue and malaria. He advises MBC on therapeutic innovation and international research partnerships.</p></div>
+          <button class="tm-more-btn"><span>See more</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
-        <div class="form-row">
-          <div><label for="fService">Service</label>
-            <select id="fService" name="service" required>
-              <option value="" selected disabled>Choose a service</option>
-              <option>General consultation</option>
-              <option>Chronic disease follow-up</option>
-              <option>Prenatal consultation</option>
-              <option>Pediatrics & vaccination</option>
-              <option>Family planning</option>
-              <option>Preventive check-up</option>
-              <option>Psychological support</option>
-              <option>Laboratory / rapid test</option>
-            </select>
-          </div>
-          <div><label for="fDate">Preferred date</label><input type="date" id="fDate" name="date"></div>
+      </article>
+      <article class="tm-card mbcx-reveal">
+        <div class="tm-media" data-initials="SV"><span class="tm-imgwrap"><img src="/photos/team-vasudevan.jpg" alt="Prof. Subhash Vasudevan" loading="lazy" onerror="this.style.display='none';"></span><span class="tm-badge"><span>SV</span></span></div>
+        <div class="tm-body">
+          <div class="tm-meta"><span class="tm-kicker">Team</span><span class="tm-country">Singapore</span></div>
+          <h4>Pr. Subhash Vasudevan</h4>
+          <div class="tm-desc"><p>Professor, Program in Emerging Infectious Diseases, Duke-NUS Medical School.</p><p>World-renowned for his work on dengue virus therapeutics and antiviral drug development, Pr. Vasudevan collaborates with MBC on emerging infectious diseases research and capacity building in molecular virology.</p></div>
+          <button class="tm-more-btn"><span>See more</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
-        <div><label for="fMsg">Message (optional)</label><textarea id="fMsg" name="message" placeholder="Tell us briefly what you need..."></textarea></div>
-        <button type="submit" class="gb-btn-solid submit-btn">Send via WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-        <p class="form-note">Your information stays confidential and is used only for your appointment.</p>
-      </form>
+      </article>
+    </div>
+    <a class="ld-link mbcx-reveal" href="/governance/">Full governance & scientific board <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<section class="mbcx-partners" id="partners">
+  <div class="mbcx-partners-inner">
+    <div class="partners-head mbcx-reveal">
+      <span class="mbcx-overline">Trusted Partners</span>
+      <h2>Our Partners</h2>
+      <p>MBC collaborates with leading global organizations to advance health, empower researchers, and address key health challenges through collaboration and innovation.</p>
+    </div>
+    <div class="mbcx-reveal"><img src="/photos/new-england-biolabs.jpg" alt="New England Biolabs" class="partner-logo" onerror="this.style.display='none';"></div>
+  </div>
+</section>
+
+<section class="mbcx-cta-final" id="mbcContact">
+  <div class="mbcx-cta-inner mbcx-reveal-scale">
+    <span class="overline">Get in touch</span>
+    <h2>Advance science together with <span class="acc">MBC</span></h2>
+    <p>Whether you are a researcher, an institution, a student or a supporter, there is a place for you at the Molecular Biology Center.</p>
+    <div class="mbcx-cta-actions">
+      <a class="mbcx-cta-solid" href="/contact/">Schedule Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="mbcx-cta-ghost" href="/financial-resources/">Support Our Mission</a>
+    </div>
+    <div class="mbcx-cta-contact">
+      <div class="mbcx-cta-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Yaoundé, Cameroon</span></div>
+      <div class="mbcx-cta-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+237678094304">+237 678 09 43 04</a></div>
+      <div class="mbcx-cta-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:contact@molbiocam.org">contact@molbiocam.org</a></div>
     </div>
   </div>
 </section>
@@ -362,11 +304,12 @@
 <footer class="mbc-footer">
   <div class="mbc-footer-inner">
     <div class="mbc-footer-grid">
-      <div><h4>New Life Clinic</h4><p>A healthcare initiative of the Molecular Biology Center, dedicated to modern, accessible and human medicine in Yaoundé.</p></div>
-      <div><h4>Explore</h4><ul><li><a href="index.html">MBC Home</a></li><li><a href="#services">Services</a></li><li><a href="#team">Our Team</a></li><li><a href="#info">Practical Info</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>New Life Clinic Center, Ngousso</li><li><a href="tel:+237678094304">+237 678 09 43 04</a></li><li><a href="mailto:contact@molbiocam.org">contact@molbiocam.org</a></li></ul></div>
+      <div><h4>Molecular Biology Center</h4><p>Non-profit research institute dedicated to advancing biotechnology through research, training and innovation for Africa and the world.</p></div>
+      <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#research">Research</a></li><li><a href="#training">Training</a></li><li><a href="#team">Team</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/research-focus/">Research Focus</a></li><li><a href="/training-activities/">Training Activities</a></li><li><a href="/governance/">Governance</a></li><li><a href="new-life-clinic.html">New Life Clinic</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Yaoundé, Cameroon</li><li><a href="tel:+237678094304">+237 678 09 43 04</a></li><li><a href="mailto:contact@molbiocam.org">contact@molbiocam.org</a></li></ul></div>
     </div>
-    <div class="mbc-footer-bottom">© 2026 New Life Clinic, Molecular Biology Center. All rights reserved.<span class="dev-signature">BY Jams Tetoh</span></div>
+    <div class="mbc-footer-bottom">© 2026 Molecular Biology Center. All rights reserved.<span class="dev-signature">BY Jams Tetoh</span></div>
   </div>
 </footer>
 
@@ -375,12 +318,10 @@
 (function(){const h=document.getElementById('mbcHeader');if(!h)return;let t=false;window.addEventListener('scroll',()=>{if(!t){requestAnimationFrame(()=>{h.classList.toggle('scrolled',window.scrollY>50);t=false;});t=true;}});})();
 (function(){const b=document.getElementById('gbBack');if(!b)return;b.addEventListener('click',function(e){e.preventDefault();if(history.length>1){history.back();}else{location.href='index.html';}});})();
 (function(){const h=document.querySelector('.gb-hero');if(h)setTimeout(()=>h.classList.add('loaded'),80);const r=window.matchMedia('(prefers-reduced-motion: reduce)').matches,c=document.getElementById('gbParticles');if(c&&!r){const x=c.getContext('2d');let W,H,D,P=[];const s=()=>{D=Math.min(window.devicePixelRatio||1,2);W=c.clientWidth;H=c.clientHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);P=[];const n=Math.min(46,Math.floor(W*H/26000));for(let i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.7+.4,vx:(Math.random()-.5)*.24,vy:(Math.random()-.5)*.24,a:Math.random()*.16+.06,c:Math.random()>.5?'143,227,213':'77,208,225'});};s();window.addEventListener('resize',s);let v=true;new IntersectionObserver(e=>{v=e[0].isIntersecting;}).observe(c);(function l(){requestAnimationFrame(l);if(!v)return;x.clearRect(0,0,W,H);for(let i=0;i<P.length;i++){const p=P[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle='rgba('+p.c+','+p.a+')';x.fill();}})();}})();
-(function(){const tabs=document.querySelectorAll('.nlc-tab');tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');const id=t.getAttribute('data-tab');document.querySelectorAll('.nlc-panel').forEach(p=>p.classList.toggle('active',p.id===id));}));})();
-(function(){document.querySelectorAll('.pick-service').forEach(b=>b.addEventListener('click',()=>{const svc=b.getAttribute('data-service');const sel=document.getElementById('fService');if(sel&&svc){sel.value=svc;}const book=document.getElementById('book');if(book)book.scrollIntoView({behavior:'smooth'});}));})();
-(function(){const f=document.getElementById('bookForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('fName').value.trim();const phone=document.getElementById('fPhone').value.trim();const svc=document.getElementById('fService').value;const date=document.getElementById('fDate').value;const msg=document.getElementById('fMsg').value.trim();let text='Hello New Life Clinic, I would like to book an appointment.\nName: '+name+'\nPhone: '+phone+'\nService: '+svc;if(date)text+='\nPreferred date: '+date;if(msg)text+='\nMessage: '+msg;window.open('https://wa.me/237697955844?text='+encodeURIComponent(text),'_blank');});})();
-(function(){const btn=document.querySelector('.tm-more-btn');if(!btn)return;btn.addEventListener('click',function(){const card=document.getElementById('directorCard');card.classList.toggle('expanded');this.querySelector('span').textContent=card.classList.contains('expanded')?'See less':'See more';});})();
+(function(){const counters=document.querySelectorAll('[data-target]');if(counters.length===0)return;const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseInt(el.getAttribute('data-target'),10);const suffix=el.getAttribute('data-suffix')||'';const dur=1800;let start=null;function step(ts){if(!start)start=ts;const progress=Math.min((ts-start)/dur,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(target*ease).toLocaleString('en-US')+suffix;if(progress<1)requestAnimationFrame(step);}requestAnimationFrame(step);io.unobserve(el);}});},{threshold:0.5});counters.forEach(c=>io.observe(c));})();
 (function(){const reveals=document.querySelectorAll('.mbcx-reveal,.mbcx-reveal-left,.mbcx-reveal-right,.mbcx-reveal-scale');if(reveals.length===0)return;const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>io.observe(el));})();
 (function(){const ls=document.querySelectorAll('.mbc-mobile-link'),ss=[];ls.forEach(l=>{const id=l.getAttribute('data-section');if(id){const s=document.getElementById(id);if(s)ss.push({link:l,section:s});}});if(ss.length===0)return;const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ls.forEach(l=>l.classList.remove('active'));const m=ss.find(s=>s.section===e.target);if(m)m.link.classList.add('active');}});},{threshold:0.3,rootMargin:'-20% 0px -60% 0px'});ss.forEach(s=>ob.observe(s.section));})();
+(function(){document.querySelectorAll('.tm-more-btn').forEach(function(btn){btn.addEventListener('click',function(){const card=this.closest('.tm-card');card.classList.toggle('expanded');this.querySelector('span').textContent=card.classList.contains('expanded')?'See less':'See more';});});})();
 </script>
 </body>
 </html>
