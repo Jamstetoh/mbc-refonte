@@ -97,8 +97,6 @@ img{max-width:100%;height:auto;display:block;}
 .mbcx-hero.loaded .mbcx-contactline{animation:mbcxIn .9s cubic-bezier(.16,1,.3,1) .72s forwards;}
 .mbcx-hero.loaded .mbcx-visual{animation:mbcxIn 1.1s cubic-bezier(.16,1,.3,1) .4s forwards;}
 @keyframes mbcxIn{to{opacity:1;transform:translateY(0);}}
-
-/* ===== MISSIONS ===== */
 .mbcx-missions{background:#fff;padding:110px 24px;font-family:'Inter',sans-serif;}
 .mbcx-missions-inner{max-width:1240px;margin:0 auto;}
 .mbcx-overline{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#00695C;margin-bottom:14px;display:block;}
@@ -137,8 +135,6 @@ img{max-width:100%;height:auto;display:block;}
 .services-list{list-style:none;padding:0;margin:0;counter-reset:svc;}
 .services-list li{counter-increment:svc;position:relative;padding:12px 0 12px 40px;border-top:1px solid rgba(16,42,67,.08);font-size:.92rem;color:#33475E;line-height:1.5;}
 .services-list li::before{content:"0" counter(svc);position:absolute;left:0;top:12px;font-family:'Sora',sans-serif;font-weight:700;font-size:.85rem;color:#00695C;}
-
-/* ===== IMPACT ===== */
 .mbcx-impact{background:#102A43;padding:80px 24px;font-family:'Inter',sans-serif;}
 .mbcx-impact-inner{max-width:1240px;margin:0 auto;}
 .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
@@ -148,8 +144,6 @@ img{max-width:100%;height:auto;display:block;}
 .impact-icon svg{width:28px;height:28px;color:#fff;}
 .impact-number{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(1.8rem,3vw,2.4rem);color:#102A43;margin:0 0 8px;line-height:1;}
 .impact-label{font-size:.9rem;color:rgba(16,42,67,.7);line-height:1.5;margin:0;word-wrap:break-word;}
-
-/* ===== TEAM ===== */
 .mbcx-lead{background:#F7FBFA;padding:110px 24px;font-family:'Inter',sans-serif;}
 .mbcx-lead-inner{max-width:1240px;margin:0 auto;}
 .tm-head{margin-bottom:44px;opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
@@ -191,12 +185,19 @@ img{max-width:100%;height:auto;display:block;}
 .tm-country{padding:5px 12px;border-radius:50px;background:rgba(0,105,92,.08);color:#00695C;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
 .tm-body h4{font-family:'Sora',sans-serif;font-weight:700;font-size:1.12rem;color:#102A43;margin:0 0 10px;line-height:1.3;}
 .tm-body p{color:rgba(16,42,67,.65);font-size:.88rem;line-height:1.6;margin:0;}
+.tm-desc{position:relative;overflow:hidden;max-height:4.6em;transition:max-height .7s cubic-bezier(.16,1,.3,1);}
+.tm-desc p{margin:0 0 10px !important;}
+.tm-desc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 85%);pointer-events:none;transition:opacity .4s;}
+.tm-card.expanded .tm-desc{max-height:1600px;}
+.tm-card.expanded .tm-desc::after{opacity:0;}
+.tm-more-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:none;border:none;cursor:pointer;color:#00695C;font-weight:600;font-size:.82rem;font-family:'Inter',sans-serif;padding:0;transition:color .2s;}
+.tm-more-btn:hover{color:#005a50;text-decoration:underline;}
+.tm-more-btn svg{width:14px;height:14px;transition:transform .3s;}
+.tm-card.expanded .tm-more-btn svg{transform:rotate(180deg);}
 .ld-link{display:inline-flex;align-items:center;gap:8px;color:#00695C;font-weight:600;font-size:.92rem;text-decoration:none;}
 .ld-link svg{width:15px;height:15px;transition:transform .25s;}
 .ld-link:hover svg{transform:translateX(4px);}
 .ld-link:hover{text-decoration:underline;}
-
-/* ===== PARTNERS ===== */
 .mbcx-partners{background:#fff;padding:110px 24px;font-family:'Inter',sans-serif;}
 .mbcx-partners-inner{max-width:800px;margin:0 auto;text-align:center;}
 .partners-head{margin-bottom:48px;opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
@@ -206,8 +207,6 @@ img{max-width:100%;height:auto;display:block;}
 .partner-logo-wrap{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
 .partner-logo-wrap.in{opacity:1;transform:none;}
 .partner-logo{max-width:320px;width:100%;height:auto;margin:0 auto;display:block;}
-
-/* ===== CTA FINAL ===== */
 .mbcx-cta-final{background:linear-gradient(180deg,#F7FBFA 0%,#E0F2F1 100%);padding:140px 24px;font-family:'Inter',sans-serif;position:relative;overflow:hidden;}
 .mbcx-cta-final::before{content:"";position:absolute;width:700px;height:700px;right:-250px;top:-250px;background:radial-gradient(circle,rgba(0,105,92,.12),transparent 65%);border-radius:50%;}
 .mbcx-cta-final::after{content:"";position:absolute;width:600px;height:600px;left:-200px;bottom:-200px;background:radial-gradient(circle,rgba(21,101,192,.08),transparent 65%);border-radius:50%;}
@@ -229,8 +228,6 @@ img{max-width:100%;height:auto;display:block;}
 .mbcx-cta-contact-item svg{width:18px;height:18px;color:#00695C;flex-shrink:0;}
 .mbcx-cta-contact-item a{color:#102A43;text-decoration:none;transition:color .3s;font-weight:500;}
 .mbcx-cta-contact-item a:hover{color:#00695C;}
-
-/* ===== FOOTER ===== */
 .mbc-footer{background:#102A43;color:rgba(232,244,253,.7);padding:60px 24px 30px;font-family:'Inter',sans-serif;}
 .mbc-footer-inner{max-width:1240px;margin:0 auto;}
 .mbc-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
@@ -243,8 +240,6 @@ img{max-width:100%;height:auto;display:block;}
 .mbc-footer-bottom{padding-top:30px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.82rem;position:relative;}
 .dev-signature{display:block;margin-top:8px;font-size:.75rem;color:rgba(38,166,154,.6);font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:color .3s ease;}
 .dev-signature:hover{color:#26A69A;}
-
-/* ===== ANIMATIONS ===== */
 .mbcx-reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
 .mbcx-reveal.visible{opacity:1;transform:translateY(0);}
 .mbcx-reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
@@ -253,8 +248,6 @@ img{max-width:100%;height:auto;display:block;}
 .mbcx-reveal-right.visible{opacity:1;transform:translateX(0);}
 .mbcx-reveal-scale{opacity:0;transform:scale(.92);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
 .mbcx-reveal-scale.visible{opacity:1;transform:scale(1);}
-
-/* ===== RESPONSIVE ===== */
 @media(max-width:960px){
   .mbcx-hero-inner{grid-template-columns:1fr;gap:44px;padding:90px 20px 60px;}
   .mbcx-frame{aspect-ratio:16/10;max-height:none;}
@@ -270,8 +263,6 @@ img{max-width:100%;height:auto;display:block;}
 @media(max-width:430px){
   html,body{overflow-x:hidden !important;}*{max-width:100%;}
   .mbc-header{padding:12px 16px;}.mbc-header.scrolled{padding:8px 16px;}.mbc-logo-img{height:34px;}
-  
-  /* HERO MOBILE OPTIMISÉ */
   .mbcx-hero{min-height:auto !important;}
   .mbcx-hero-inner{padding:88px 18px 48px !important;gap:32px !important;}
   .mbcx-hero h1{font-size:clamp(1.55rem,6.6vw,1.95rem) !important;line-height:1.18 !important;margin:0 0 14px !important;letter-spacing:-.015em !important;}
@@ -281,7 +272,6 @@ img{max-width:100%;height:auto;display:block;}
   .mbcx-btn-solid,.mbcx-btn-ghost{white-space:nowrap;padding:13px 16px !important;font-size:.86rem !important;gap:8px !important;border-radius:14px !important;}
   .mbcx-btn-solid svg{width:14px !important;height:14px !important;}
   .mbcx-contactline{font-size:.82rem !important;margin-top:18px !important;gap:8px !important;}
-  
   .mbcx-missions,.mbcx-lead,.mbcx-partners,.mbcx-cta-final{padding:60px 16px !important;}
   .mission-intro h2,.tm-head h2,.partners-head h2,.mbcx-cta-inner h2{font-size:clamp(1.4rem,6vw,1.8rem) !important;}
   .mission-intro p,.tm-head p,.partners-head p{font-size:.9rem !important;}
@@ -356,7 +346,7 @@ img{max-width:100%;height:auto;display:block;}
     <div class="mbcx-visual mbcx-reveal-right">
       <div class="mbcx-frame">
         <img src="/photos/hero-lab.jpg" alt="MBC research team at work" loading="lazy">
-        <span class="mbcx-caption"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> MBC main laboratory — Yaoundé, Cameroon</span>
+        <span class="mbcx-caption"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> MBC main laboratory, Yaoundé, Cameroon</span>
       </div>
     </div>
   </div>
@@ -375,7 +365,7 @@ img{max-width:100%;height:auto;display:block;}
       <a href="/research-focus/" class="mission-card-large card-research mbcx-reveal">
         <span class="mbcx-overline">Research</span>
         <h3>Research Institute</h3>
-        <p>Fundamental and applied research on the diseases that weigh heaviest on Central Africa — from diagnosis to drug discovery.</p>
+        <p>Fundamental and applied research on the diseases that weigh heaviest on Central Africa, from diagnosis to drug discovery.</p>
         <span class="card-arrow">Explore research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
       </a>
       <a href="#training" class="mission-card-large card-training mbcx-reveal">
@@ -384,7 +374,7 @@ img{max-width:100%;height:auto;display:block;}
         <p>Hands-on biotechnology workshops, seminars and science library for students and professionals.</p>
         <span class="card-arrow">View programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
       </a>
-      <a href="/live-clinic/" class="mission-card-large card-clinic mbcx-reveal">
+      <a href="new-life-clinic.html" class="mission-card-large card-clinic mbcx-reveal">
         <span class="mbcx-overline">Consultations</span>
         <h3>New Life Clinic</h3>
         <p>Real-time patient consultations, laboratory investigations and management services for members of the community.</p>
@@ -400,7 +390,7 @@ img{max-width:100%;height:auto;display:block;}
         <div class="accordion-body">
           <div class="accordion-content">
             <ul class="services-list">
-              <li>Consultancy — collaboration and execution of research projects</li>
+              <li>Consultancy: collaboration and execution of research projects</li>
               <li>Provision of biological materials from Africa</li>
               <li>Biotechnology workshops for professionals</li>
               <li>Seminars, conferences and workshops</li>
@@ -424,7 +414,7 @@ img{max-width:100%;height:auto;display:block;}
       <div class="impact-card mbcx-reveal-scale">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <div class="impact-number"><span data-target="1" data-suffix="">0</span></div>
-        <p class="impact-label">Patented enzyme (CspCI — WO200594516A)</p>
+        <p class="impact-label">Patented enzyme (CspCI, WO200594516A)</p>
       </div>
       <div class="impact-card mbcx-reveal-scale">
         <div class="impact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
@@ -446,7 +436,7 @@ img{max-width:100%;height:auto;display:block;}
     <div class="tm-head mbcx-reveal">
       <span class="mbcx-overline">Our Team</span>
       <h2>The people behind the science</h2>
-      <p>A multidisciplinary team of scientists and advisors, supported by a Board of Directors — CEO, Executive Director, Finance Administrator and Legal Advisor.</p>
+      <p>A multidisciplinary team of scientists and advisors, supported by a Board of Directors: CEO, Executive Director, Finance Administrator and Legal Advisor.</p>
     </div>
     <article class="tm-founder mbcx-reveal-left">
       <div class="tm-founder-media">
@@ -456,7 +446,7 @@ img{max-width:100%;height:auto;display:block;}
         <span class="mbcx-overline">Founder</span>
         <h3>Pr. Céline Nkenfou</h3>
         <span class="tm-role">Parasitology, molecular biology</span>
-        <p>Pr. Céline Nkenfou founded the Molecular Biology Center in 1996. A pioneering Cameroonian molecular biologist, she has built a career spanning parasitology, molecular diagnostics and biotechnology capacity-building — shaping biomedical science across Central Africa.</p>
+        <p>Pr. Céline Nkenfou founded the Molecular Biology Center in 1996. A pioneering Cameroonian molecular biologist, she has built a career spanning parasitology, molecular diagnostics and biotechnology capacity-building, shaping biomedical science across Central Africa.</p>
         <p>Her doctoral work on restriction endonucleases was conducted under Dr. Richard Roberts, Nobel Laureate in Physiology or Medicine (1993), followed by a postdoctoral position as visiting scientist at the Novartis Institute for Tropical Diseases.</p>
         <span class="tm-nobel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg><span><b>PhD with Dr. Richard Roberts</b><span>Nobel Laureate, Medicine 1993</span></span></span>
       </div>
@@ -470,7 +460,11 @@ img{max-width:100%;height:auto;display:block;}
         <div class="tm-body">
           <div class="tm-meta"><span class="tm-kicker">Team</span><span class="tm-country">Singapore</span></div>
           <h4>Pr. Alex Matter</h4>
-          <p>Director, Experimental Therapeutic Centre (ETC) — Co-founder & CEO, Esperanza Medicines Foundation</p>
+          <div class="tm-desc">
+            <p>Director, Experimental Therapeutic Centre (ETC). Co-founder & CEO, Esperanza Medicines Foundation.</p>
+            <p>A pioneer of translational medicine in Asia, Pr. Matter has led groundbreaking drug discovery programs for neglected infectious diseases, including dengue and malaria. He advises MBC on therapeutic innovation and international research partnerships.</p>
+          </div>
+          <button class="tm-more-btn"><span>See more</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
       </article>
       <article class="tm-card mbcx-reveal">
@@ -481,7 +475,11 @@ img{max-width:100%;height:auto;display:block;}
         <div class="tm-body">
           <div class="tm-meta"><span class="tm-kicker">Team</span><span class="tm-country">Singapore</span></div>
           <h4>Pr. Subhash Vasudevan</h4>
-          <p>Professor, Program in Emerging Infectious Diseases, Duke-NUS Medical School</p>
+          <div class="tm-desc">
+            <p>Professor, Program in Emerging Infectious Diseases, Duke-NUS Medical School.</p>
+            <p>World-renowned for his work on dengue virus therapeutics and antiviral drug development, Pr. Vasudevan collaborates with MBC on emerging infectious diseases research and capacity building in molecular virology.</p>
+          </div>
+          <button class="tm-more-btn"><span>See more</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
         </div>
       </article>
     </div>
@@ -508,7 +506,7 @@ img{max-width:100%;height:auto;display:block;}
   <div class="mbcx-cta-inner mbcx-reveal-scale">
     <span class="overline">Get in touch</span>
     <h2>Advance science together with <span class="acc">MBC</span></h2>
-    <p>Whether you are a researcher, an institution, a student or a supporter — there is a place for you at the Molecular Biology Center.</p>
+    <p>Whether you are a researcher, an institution, a student or a supporter, there is a place for you at the Molecular Biology Center.</p>
     <div class="mbcx-cta-actions">
       <a class="mbcx-cta-solid" href="/contact/">Schedule Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <a class="mbcx-cta-ghost" href="/financial-resources/">Support Our Mission</a>
@@ -524,9 +522,9 @@ img{max-width:100%;height:auto;display:block;}
 <footer class="mbc-footer">
   <div class="mbc-footer-inner">
     <div class="mbc-footer-grid">
-      <div><h4>Molecular Biology Center</h4><p>Non-profit research institute dedicated to advancing biotechnology through research, training and innovation — for Africa and the world.</p></div>
+      <div><h4>Molecular Biology Center</h4><p>Non-profit research institute dedicated to advancing biotechnology through research, training and innovation for Africa and the world.</p></div>
       <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#research">Research</a></li><li><a href="#training">Training</a></li><li><a href="#team">Team</a></li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="/research-focus/">Research Focus</a></li><li><a href="/training-activities/">Training Activities</a></li><li><a href="/governance/">Governance</a></li><li><a href="/financial-resources/">Support Us</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/research-focus/">Research Focus</a></li><li><a href="/training-activities/">Training Activities</a></li><li><a href="/governance/">Governance</a></li><li><a href="new-life-clinic.html">New Life Clinic</a></li></ul></div>
       <div><h4>Contact</h4><ul><li>Yaoundé, Cameroon</li><li><a href="tel:+237675573519">+237 675 57 35 19</a></li><li><a href="mailto:contact@molbiocam.org">contact@molbiocam.org</a></li></ul></div>
     </div>
     <div class="mbc-footer-bottom">
@@ -543,6 +541,7 @@ img{max-width:100%;height:auto;display:block;}
 (function(){const counters=document.querySelectorAll('[data-target]');if(counters.length===0)return;const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseInt(el.getAttribute('data-target'),10);const suffix=el.getAttribute('data-suffix')||'';const dur=1800;let start=null;function step(ts){if(!start)start=ts;const progress=Math.min((ts-start)/dur,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.round(target*ease).toLocaleString('en-US')+suffix;if(progress<1)requestAnimationFrame(step);}requestAnimationFrame(step);io.unobserve(el);}});},{threshold:0.5});counters.forEach(c=>io.observe(c));})();
 (function(){const reveals=document.querySelectorAll('.mbcx-reveal,.mbcx-reveal-left,.mbcx-reveal-right,.mbcx-reveal-scale,.mission-intro,.mission-card-large,.services-accordion,.impact-card,.tm-head,.tm-founder,.tm-card,.ld-link,.partners-head,.partner-logo-wrap');if(reveals.length===0)return;const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in','visible');io.unobserve(entry.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>io.observe(el));})();
 (function(){const ls=document.querySelectorAll('.mbc-mobile-link'),ss=[];ls.forEach(l=>{const id=l.getAttribute('data-section');if(id){const s=document.getElementById(id);if(s)ss.push({link:l,section:s});}});if(ss.length===0)return;const ob=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ls.forEach(l=>l.classList.remove('active'));const m=ss.find(s=>s.section===e.target);if(m)m.link.classList.add('active');}});},{threshold:0.3,rootMargin:'-20% 0px -60% 0px'});ss.forEach(s=>ob.observe(s.section));})();
+(function(){document.querySelectorAll('.tm-more-btn').forEach(function(btn){btn.addEventListener('click',function(){const card=this.closest('.tm-card');card.classList.toggle('expanded');this.querySelector('span').textContent=card.classList.contains('expanded')?'See less':'See more';});});})();
 </script>
 </body>
 </html>
